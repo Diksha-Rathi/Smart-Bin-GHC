@@ -76,8 +76,8 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'smart_bin',
-        'USER': 'diksha',
-        'PASSWORD': '12345',
+        'USER': 'your_username',
+	'PASSWORD': 'your_password',
         'HOST': '',
         'PORT': '',
     }
