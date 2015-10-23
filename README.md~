@@ -7,7 +7,6 @@ The Smart Bin project of GHC Women Hackathon 2015.
 ## Setup Instructions
 
 * Clone the source.
-
 ```sh
 $ git clone git@github.com:diksha-rathi/Smart-Bin-GHC.git
 ```
@@ -28,8 +27,7 @@ $ git clone git@github.com:diksha-rathi/Smart-Bin-GHC.git
 $ cd Smart-Bin-GHC
 $ python manage.py runserver
 ```
-
-##License
+License
 ----
 
 MIT
