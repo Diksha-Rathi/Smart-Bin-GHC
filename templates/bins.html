@@ -9,26 +9,36 @@
 {% block content2 %} 
 
  <div class="list-group">
-  <a href="#" class="list-group-item">Location 1, Bin 1</a>
-  <a href="#" class="list-group-item">Location 1, Bin 2</a>
-  <a href="#" class="list-group-item">Location 2</a>
-  <a href="#" class="list-group-item">Location 3</a>
-  <a href="#" class="list-group-item">Location 4</a>
-  <a href="#" class="list-group-item">Location 5</a>
-  <a href="#" class="list-group-item">Location 6</a>
-  <a href="#" class="list-group-item">Location 7</a>
-</div>
+  <!--Bins with 71- 100% fill level-->
+  {% if result1 %}
+    {% for bin in result1 %}
+      <a href="#" style="background-color: #881001; color: #fff" class="list-group-item">
+        {{ bin.location_id }}{% if bin.bin_id %}, {{ bin.bin_id }}{% endif %}
+        <span class="numberCircle">{{ bin.fill_level }}%</span>
+      </a>
+    {% endfor %}
+  {% endif %}
 
-testing
+  <!--Bins with 51- 70% fill level-->
+  {% if result2 %}
+    {% for bin in result2 %}
+      <a href="#" style="background-color: #D5B220; color: #000" class="list-group-item">
+        {{ bin.location_id }}{% if bin.bin_id %}, {{ bin.bin_id }}{% endif %}
+        <span class="numberCircle">{{ bin.fill_level }}%</span>
+      </a>
+    {% endfor %}
+  {% endif %}
 
-{% if result %}
-    <ul>
-        {% for bin in result %}
-        <li>{{ bin.humidity }}</li>
-        {% endfor %}
-    </ul>
-{% else %}
-    <p>No bins matched your search criteria.</p>
-{% endif %}
+  <!--Bins with 0- 50% fill level-->
+  {% if result3 %}
+    {% for bin in result3 %}
+      <a href="#" style="background-color: #0A5E18; color: #fff"class="list-group-item">
+        {{ bin.location_id }}{% if bin.bin_id %}, {{ bin.bin_id }}{% endif %}
+        <span class="numberCircle">{{ bin.fill_level }}%</span>
+      </a>
+    {% endfor %}
+  {% endif %}
+</div><!--end list-group-->
+
 
 {% endblock %}

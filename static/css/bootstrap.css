@@ -5307,7 +5307,7 @@ a.thumbnail.active {
 }
 .list-group {
   padding-left: 0;
-  margin-bottom: 20px;
+  margin-bottom: 0px;
 }
 .list-group-item {
   position: relative;
@@ -6845,4 +6845,15 @@ button.close {
   .footer-basic-centered a{
     line-height: 1.8;
   }
+}
+
+/* My css */
+.numberCircle {
+    border-radius: 50%;
+    width: 16px;
+    height: 16px;
+    padding: 3px;
+    background: #fff;
+    color: #000;
+    text-align: center;
 }
