@@ -19,4 +19,16 @@
   <a href="#" class="list-group-item">Location 7</a>
 </div>
 
+testing
+
+{% if result %}
+    <ul>
+        {% for bin in result %}
+        <li>{{ bin.humidity }}</li>
+        {% endfor %}
+    </ul>
+{% else %}
+    <p>No bins matched your search criteria.</p>
+{% endif %}
+
 {% endblock %}

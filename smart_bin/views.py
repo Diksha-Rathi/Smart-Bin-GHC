@@ -6,12 +6,6 @@ from django.http import HttpResponseRedirect
 def home(request):
     return render_to_response('index.html', context_instance=RequestContext(request))
 
-def bins(request):
-    return render_to_response('bins.html', context_instance=RequestContext(request))
-
-def bins(request):
-    return render_to_response('bins.html', context_instance=RequestContext(request))
-
 def optimalRoute(request):
     return render_to_response('optimal-route.html', context_instance=RequestContext(request))
 

@@ -20,7 +20,7 @@ urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
     url(r'^$', 'smart_bin.views.home', name='home'),
     url(r'^index', 'smart_bin.views.home'),
-    url(r'^bins', 'smart_bin.views.bins'),
+    url(r'^bins', 'bins.views.bins'),
     url(r'^optimal-route', 'smart_bin.views.optimalRoute'),
     url(r'^analytics', 'smart_bin.views.analytics'),
 ]
