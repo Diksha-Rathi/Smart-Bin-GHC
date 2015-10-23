@@ -75,7 +75,7 @@ WSGI_APPLICATION = 'smart_bin.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'name_of_the_database',
+        'NAME': 'smart_bin',
         'USER': 'your_username',
         'PASSWORD': 'your_password',
         'HOST': '',
