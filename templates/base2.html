@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% load staticfiles %}
+
+{% block navbar-items %}
+	<li><a href="#">Log Out</a></li>
+{% endblock %}
+
+{% block content %}
+
+<ul class="nav nav-tabs nav-justified">
+  {% block tabitems %} {% endblock %}
+</ul>
+
+{% block content2 %} {% endblock %}
+
+{% endblock %}
