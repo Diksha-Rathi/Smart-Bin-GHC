@@ -1,8 +1,7 @@
-#Smart-Bin-GHC
+#Smart Bin-GHC
 ##Project 3
 
 The Smart Bin project of GHC Women Hackathon 2015.
-
 
 ## Setup Instructions
 
@@ -11,11 +10,12 @@ The Smart Bin project of GHC Women Hackathon 2015.
 ```sh
 $ git clone git@github.com:diksha-rathi/Smart-Bin-GHC.git
 ```
+
 * Install postgresql.
 
 * Create a database with the name 'smart_bin'.
 
-* Edit the following lines with your username and password for the database.
+* Edit the following lines in smart_bin/settings.py with your username and password for the database.
 
 ```sh
 'USER': 'your_username',
