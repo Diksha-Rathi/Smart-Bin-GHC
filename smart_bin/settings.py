@@ -36,6 +36,8 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'bins',
+    'userDetails',
+    'registration',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -74,14 +76,16 @@ WSGI_APPLICATION = 'smart_bin.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'smart_bin',
-        'USER': 'your_username',
-	'PASSWORD': 'your_password',
-        'HOST': '',
-        'PORT': '',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'smartBin',
+        'HOST': 'localhost',
+        'USER': 'root',
+        'PASSWORD': 'iamthriving',#Change the password
+        'PORT' : 3306,
     }
 }
+
+
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.8/topics/i18n/
