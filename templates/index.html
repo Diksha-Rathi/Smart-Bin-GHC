@@ -16,14 +16,60 @@
 			<div class="col-md-4 col-md-offset-4">
 				<img class="img-responsive" style=" margin: 0 auto;" src="{% static "images/Volunteer-Icon.png"%}" alt=""></img>
 				<h2 align="center"> Volunteers Login</h2>
-				<form action="" method="post" role="form" >
-				{% csrf_token %}
-				<div class="form-group">
-					<input type="text" class="form-control" name="username" placeholder="Username"><br>	
-					<input type="password" class="form-control" name="password" placeholder="Password"><br>
-					<button type="submit" class="btn btn-primary btn-md center-block" value="Login">Log In</button>
-				</div>
-			</form>		
+
+<!--          <form action="/login/" method="post" role="form" >
+					 {% if next %}
+	                  <input type="hidden" name='next' value ="{{next}}">
+	                 {% endif %}
+					 {% csrf_token %}
+					 {% if form.non_field_errors %}   
+				         <p class="error">
+					        {% for error in form.non_field_errors %}
+				               {{ error }}
+			 	            {% endfor %}
+				          </p>
+                      {% endif %}
+					<div class="form-group">
+						<input type="text" class="form-control" name="username" placeholder="Username"><br>	
+						<input type="password" class="form-control" name="password" placeholder="Password"><br>
+						<button type="submit" class="btn btn-primary btn-md center-block" value="Login">Log In</button>
+					</div>
+			    </form>		 -->
+
+		  <form role="form" action="." method="post">
+	         
+           {% csrf_token %}  
+           
+           {% if form.non_field_errors %}  <!-- errors -->
+            <p class="error">
+		          {% for error in form.non_field_errors %}
+		            {{ error }}
+		          {% endfor %}
+            </p>
+           {% endif %}
+  
+           {% for field in form %}
+            <div class="form-horizontal">
+		         {{ field.label_tag }}
+               {% if field.field.required %}
+               *
+               {% endif %}
+               <br/>
+		           {{ field }}
+		         
+               {% if field.errors %}
+		           <p class="error">
+		           {% for error in field.errors %}
+		             {{ error }}
+		           {% endfor %}
+		           </p>
+		          {% endif %}
+            </div>
+           {% endfor %}
+           
+    		<input style="margin-top:5px" type="submit" class="btn btn-primary" value="Submit" />
+   	  </form>
+			    
 		</div><!--end row 1-->
 		<a href="bins.html">Click here to go to the page that will be displayed after log in. </a>
 		<br>(I will remove this text later)

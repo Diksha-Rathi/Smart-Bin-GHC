@@ -15,12 +15,19 @@ Including another URLconf
 """
 from django.conf.urls import include, url
 from django.contrib import admin
-
+# from userDetails.views import *
+from registration.views import *
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
-    url(r'^$', 'smart_bin.views.home', name='home'),
+    #url(r'^$', 'smart_bin.views.home', name='home'),
     url(r'^index', 'smart_bin.views.home'),
     url(r'^bins', 'bins.views.bins'),
     url(r'^optimal-route', 'smart_bin.views.optimalRoute'),
-    url(r'^analytics', 'smart_bin.views.analytics'),
+    url(r'^analytics', 'smart_bin.views.analytics'), 
+    url(r'^hello/$',hello),
+    url(r'^$',myLogin),
+    url(r'^login/$',myLogin),
+    url(r'^account/login/',myLogin),
+    url(r'^account/logout',logoutview),
 ]
+
