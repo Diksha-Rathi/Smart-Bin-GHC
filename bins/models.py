@@ -32,7 +32,7 @@ from django.db import models
 
 class binAdded(models.Model):
 	bin_id=models.CharField(max_length=20,blank=False,unique=True)
-	date_added=models.DateTimeField(auto_now_add=True)
+	date_added=models.DateField(auto_now_add=True)
 	longitude=models.DecimalField(max_digits=20,decimal_places=13)
 	latitude=models.DecimalField(max_digits=20,decimal_places=13)
 
@@ -44,7 +44,7 @@ class binAdded(models.Model):
 
 class binDescription(models.Model):
 	bin_id=models.ForeignKey(binAdded)
-	current_date=models.DateTimeField()
+	current_date=models.DateField()
 	fill_level=models.DecimalField(max_digits=5, decimal_places=3)
 	temperature=models.IntegerField()
 	humidity = models.IntegerField()
