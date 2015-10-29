@@ -29,5 +29,7 @@ urlpatterns = [
     url(r'^login/$',myLogin),
     url(r'^account/login/',myLogin),
     url(r'^account/logout',logoutview),
+    url(r'^master_data/','bins.views.my_json_view'),
+    url(r'^date_wise_update/','bins.views.my_json_view2'),
 ]
 
