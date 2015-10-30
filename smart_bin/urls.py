@@ -15,11 +15,11 @@ Including another URLconf
 """
 from django.conf.urls import include, url
 from django.contrib import admin
-# from userDetails.views import *
+from bins.views import *
 from registration.views import *
+
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
-    #url(r'^$', 'smart_bin.views.home', name='home'),
     url(r'^index', 'smart_bin.views.home'),
     url(r'^bins', 'bins.views.bins'),
     url(r'^optimal-route', 'smart_bin.views.optimalRoute'),
@@ -32,4 +32,3 @@ urlpatterns = [
     url(r'^master_data/','bins.views.my_json_view'),
     url(r'^date_wise_update/','bins.views.my_json_view2'),
 ]
-

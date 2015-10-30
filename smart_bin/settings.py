@@ -38,6 +38,7 @@ INSTALLED_APPS = (
     'bins',
     'userDetails',
     'registration',
+    'chartit',
 )
 
 MIDDLEWARE_CLASSES = (
