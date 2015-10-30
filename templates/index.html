@@ -11,73 +11,52 @@
 	
 	<div class="container">
 		<!--start row 1-->
-		<!--Login section-->
 		<div class= "row">
 			<div class="col-md-4 col-md-offset-4">
 				<img class="img-responsive" style=" margin: 0 auto;" src="{% static "images/Volunteer-Icon.png"%}" alt=""></img>
 				<h2 align="center"> Volunteers Login</h2>
 
-<!--          <form action="/login/" method="post" role="form" >
-					 {% if next %}
-	                  <input type="hidden" name='next' value ="{{next}}">
-	                 {% endif %}
-					 {% csrf_token %}
-					 {% if form.non_field_errors %}   
-				         <p class="error">
-					        {% for error in form.non_field_errors %}
-				               {{ error }}
-			 	            {% endfor %}
-				          </p>
-                      {% endif %}
-					<div class="form-group">
-						<input type="text" class="form-control" name="username" placeholder="Username"><br>	
-						<input type="password" class="form-control" name="password" placeholder="Password"><br>
-						<button type="submit" class="btn btn-primary btn-md center-block" value="Login">Log In</button>
-					</div>
-			    </form>		 -->
+				<!--Login section-->
+		  		<form role="form" action="." method="post">
+	       			<div class="form-group">
+           				{% csrf_token %}  
+           
+           				<!--{% if form.non_field_errors %}
+				            <p class="error">
+						          {% for error in form.non_field_errors %}
+						            {{ error }}
+						          {% endfor %}
+				            </p>
+				        {% endif %}-->
 
-		  <form role="form" action="." method="post">
-	         
-           {% csrf_token %}  
-           
-           {% if form.non_field_errors %}  <!-- errors -->
-            <p class="error">
-		          {% for error in form.non_field_errors %}
-		            {{ error }}
-		          {% endfor %}
-            </p>
-           {% endif %}
+				        <input type="text" class="form-control" name="username" id="id_username" placeholder="Username">
+				        <br>	
+						<input type="password" class="form-control" name="password" id="id_password" placeholder="Password"><br>  
   
-           {% for field in form %}
-            <div class="form-horizontal">
-		         {{ field.label_tag }}
-               {% if field.field.required %}
-               *
-               {% endif %}
-               <br/>
-		           {{ field }}
-		         
-               {% if field.errors %}
-		           <p class="error">
-		           {% for error in field.errors %}
-		             {{ error }}
-		           {% endfor %}
-		           </p>
-		          {% endif %}
-            </div>
-           {% endfor %}
            
-    		<input style="margin-top:5px" type="submit" class="btn btn-primary" value="Submit" />
-   	  </form>
-			    
+		          		 <!--p class="error">
+		           			{% for error in field.errors %}
+		             			{{ error }}
+		           			{% endfor %}
+		           		</p-->
+           
+    					<button style="margin-top:5px" type="submit" class="btn btn-primary btn-md center-block" value="Submit"/>
+    						Log In
+    					</button>
+    				</div><!--end form-group-->
+   	  			</form>
+   	  		</div><!-- end col-->
 		</div><!--end row 1-->
-		<a href="bins.html">Click here to go to the page that will be displayed after log in. </a>
-		<br>(I will remove this text later)
 	</div><!--end container -->
+
 	<div class="jumbotron" id="about">
 		<div class="container">
-			<h1 align="center">About Us</h1><hr>
-			<p align="center">We are a Bangalore based NGO. We are working closely with the Municipal Corporation of Bangalore regarding collection and segregation of waste. We have over 2000 bins installed all over the city of Bangalore. Our Volunteers are not only responsible for cleaning and refilling the bins but also we teach the fellow citizens about waste segregation. This website is our tool to help our volunteers with the same.</p>
+			<div class="row">
+				<div class="col-md-8 col-md-offset-2">
+					<h1 align="center">About Us</h1><hr>
+					<p align="center">We are a Bangalore based NGO. We are working closely with the Municipal Corporation of Bangalore regarding collection and segregation of waste. We have over 2000 bins installed all over the city of Bangalore. Our Volunteers are not only responsible for cleaning and refilling the bins but also we teach the fellow citizens about waste segregation. This website is our tool to help our volunteers with the same.</p>
+				</div>
+			</div>
 		</div><!--end container-->
 	</div><!--end jumbotron-->
 

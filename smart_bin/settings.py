@@ -76,12 +76,12 @@ WSGI_APPLICATION = 'smart_bin.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'smartBin',
-        'HOST': 'localhost',
-        'USER': 'root',
-        'PASSWORD': 'iamthriving',#Change the password
-        'PORT' : 3306,
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'smart_bin',
+        'USER': 'diksha',
+        'PASSWORD': '12345',
+        'HOST': '',
+        'PORT': '',
     }
 }
 
