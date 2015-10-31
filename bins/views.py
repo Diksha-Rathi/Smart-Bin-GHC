@@ -26,3 +26,12 @@ def my_json_view2(request):
 	bin_update = bin_updates.objects.all()
 	data = serializers.serialize("json",bin_update)
 	return HttpResponse(data, content_type="application/json")
+
+
+###----------------------------------pip install django-queryset-csv-------------------###
+@login_required
+def get_csv(request):
+    qs = bin_updates.objects.all()
+    return djqscsv.render_to_csv_response(qs)
+
+    	
