@@ -31,5 +31,6 @@ urlpatterns = [
     url(r'^account/logout',logoutview),
     url(r'^master_data/','bins.views.my_json_view'),
     url(r'^date_wise_update/','bins.views.my_json_view2'),
+    url(r'^attempt/','bins.views.get_csv'),
 ]
 
