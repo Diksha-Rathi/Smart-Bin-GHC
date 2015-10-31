@@ -20,14 +20,19 @@
 	<!-- Latest compiled and minified CSS -->
 		<link href="{% static "css/bootstrap.css"%}" rel="stylesheet" type="text/css"/>
 		<link href="{% static "css/analytics.css"%}" rel="stylesheet" type="text/css"/>
+		<link href="{% static "css/charts.css"%}" rel="stylesheet" type="text/css"/>
+		<link href="{% static "css/charts_common.css"%}" rel="stylesheet" type="text/css"/>
   
 	<!-- jQuery library-->
-		<script src="{% static "js/jquery-1.11.3.js"%}"></script>
-		<script src="{% static "js/highcharts.js"%}"></script>
+		<script src="{% static "js/chart.js"%}"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js"></script>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
 
 	<!-- Latest compiled JavaScript-->
 		<script src="{% static "css/bootstrap.js"%}"></script>
-		
+
+	{% block head %} {% endblock %}
+
 </head>
 
 <body>

@@ -1,64 +1,41 @@
+{% extends "base2.html" %}
 
-<!doctype html>
-<html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=1024">
-		<title>Bin Fill Levels</title>
-		<link rel="stylesheet" href="charts_common.css">
-		<link rel="stylesheet" href="charts.css">
-	</head>
-	<body>
-		<div id="wrapper">
-			<div class="chart">
-				<h2>Bin Fill Levels</h2>
-				<table id="data-table" border="1" cellpadding="10" cellspacing="0" summary="The effects of the zombie outbreak on the populations of endangered species from 2012 to 2016">
-					<caption>Humidity in percentage</caption>
-					<thead>
-						<tr>
-							<td>&nbsp;</td>
-							<th scope="col">Today</th>
-							<th scope="col">Yesterday</th>
-							<th scope="col">Tomorrow</th>
-							<th scope="col">Some day</th>
-							
-						</tr>
-					</thead>
-					<tbody>
-						<tr>
-							<th scope="row">Paschim Vihar</th>
-							<td>4080</td>
-							<td>6080</td>
-							<td>6240</td>
-							<td>3520</td>
-							<td>2240</td>
-						</tr>
-						<tr>
-							<th scope="row">Karol Bagh</th>
-							<td>5680</td>
-							<td>6880</td>
-							<td>5760</td>
-							<td>5120</td>
-							<td>2640</td>
-						</tr>
-						<tr>
-							<th scope="row">Lajpat Nagar</th>
-							<td>1040</td>
-							<td>1760</td>
-							<td>2880</td>
-							<td>4720</td>
-							<td>7520</td>
-						</tr>
-					</tbody>
-				</table>
-			</div>
+{% block head2 %}
+	<script src="../static/js/chart.js"></script>
+{% endblock %}
+
+{% block tabitems %} 
+	<li class="active"><a href="bins.html">Bins- Fill Level</a></li>
+  	<li><a href="optimal-route.html">Optimal Route</a></li>
+  	<li><a href="analytics.html">Analytics</a></li>
+{% endblock %}
+
+{% block content2 %} 
+	<div id="wrapper">
+		<div class="chart">
+			<table id="data-table" border="1" cellpadding="10" cellspacing="0" summary="Humidity analysis of bins">
+				<caption>Humidity in percentage</caption>
+				<thead>
+					<tr>
+						<td>&nbsp;</td>
+						<th scope="col">28th Oct</th>
+						<th scope="col">29th Oct</th>
+						<th scope="col">30th Oct</th>
+						<th scope="col">31st Oct</th>
+					    <th scope="col">1st Nov</th>	
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<th scope="row">LalBagh Botanical Garden</th>
+						<td>4080</td>
+						<td>6080</td>
+						<td>6240</td>
+						<td>3520</td>
+						<td>2240</td>
+					</tr>						
+				</tbody>
+			</table>
 		</div>
-		
-		
-		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
-		
-		
-		<script src="chart.js"></script>
-		
-	</body>
-</html>
+	</div>				
+{% endblock %}

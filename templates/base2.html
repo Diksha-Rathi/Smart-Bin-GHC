@@ -2,6 +2,10 @@
 
 {% load staticfiles %}
 
+{% block head %}
+	{% block head2 %} {% endblock %}
+{% endblock %}
+
 {% block navbar-items %}
 	<li><a href="/account/logout">Log Out</a></li>
 {% endblock %}

@@ -1,5 +1,6 @@
 from django.db import models
- 
+import json 
+
 #Create your models here.
 class bin_record(models.Model):
 	location_id = models.CharField(max_length=60)

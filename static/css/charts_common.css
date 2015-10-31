@@ -1,35 +1,6 @@
-body {
-	background: #fff;
-	color: #222;
-	font: 12px/20px 'Helvetica Neue', Arial, sans-serif;
-	margin: 0;
-	padding: 0;
-}
-h2 {
-	font-size: 18px;
-	font-weight: normal;
-	line-height: 20px;
-	margin: 0 0 20px 0;
-	padding: 0;
-	text-align: center;
-}
-h4 {
-	color: #545454;
-	font-size: 14px;
-	font-weight: normal;
-	line-height: 20px;
-	margin: 0 0 20px 0;
-	padding: 0;
-	text-align: center;
-}
-a {
-	color: #333;
-}
-
 /* Table */
 #data-table {
 	border: none; /* Turn off all borders */
-	border-top: 1px solid #ccc;
 	width: 540px;
 }
 #data-table caption {
@@ -80,13 +51,12 @@ a {
 	float:right;
 }
 
-/* Graph */
 /* Containers */
 #wrapper {
 	height: 420px;
-	left: 50%;
-	margin: -210px 0 0 -270px;
-	position: absolute;
+	left: 30%;
+	margin: 0px 0 0 0px;
+	position: relative;
 	top: 50%;	
 	width: 540px;
 }
@@ -106,7 +76,7 @@ a {
 
 /* Legend */
 .legend {
-	background: #f0f0f0;
+	background: #EBC326;
 	border-radius: 4px;
 	bottom: 0;
 	position: absolute;
@@ -119,7 +89,7 @@ a {
 	height: 20px;
 	margin: 0;
 	padding: 10px 30px;
-	width: 120px;
+	
 }
 .legend span.icon {
 	background-position: 50% 0;
@@ -134,7 +104,7 @@ a {
 /* X-Axis */
 .x-axis {
 	bottom: 0;
-	color: #555;
+	color: #000;
 	position: absolute;
 	text-align: center;
 	width: 540px;
@@ -148,13 +118,13 @@ a {
 
 /* Y-Axis */
 .y-axis {
-	color: #555;
+	color: #000;
 	position: absolute;
 	text-align: right;
 	width: 100%;
 }
 .y-axis li {
-	border-top: 1px solid #ccc;
+	border-top: 1px solid #000;
 	display: block;
 	height: 62px;
 	width: 100%;
@@ -199,7 +169,7 @@ a {
 	left: 52px;
 }
 .bar span {
-	background: #fefefe;
+	background: #EBC326;
 	border-radius: 3px;
 	left: -8px;
 	display: none;
