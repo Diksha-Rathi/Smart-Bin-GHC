@@ -39,6 +39,7 @@ INSTALLED_APPS = (
     'userDetails',
     'registration',
     'chartit',
+    'bootstrap3_datetime',
 )
 
 MIDDLEWARE_CLASSES = (

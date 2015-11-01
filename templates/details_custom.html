@@ -1,52 +1,49 @@
+{% extends "base2.html" %}
 
-<!doctype html>
-<html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=1024">
-		<title>Bin Fill Levels</title>
-		<link rel="stylesheet" href="charts_common.css">
-		<link rel="stylesheet" href="charts.css">
-	</head>
-	<body>
-		<div id="wrapper">
-			<div class="chart">
-				<h2>Bin Fill Levels</h2>
-				<table id="data-table" border="1" cellpadding="10" cellspacing="0" summary="">
-					<caption>Humidity in percentage</caption>
-					<thead>
-						<tr>
-							<td>&nbsp;</td>
-							<th scope="col">1st July</th>
-							<th scope="col">1st Aug</th>
-							<th scope="col">1st Sep</th>
-							<th scope="col">1st Oct</th>
-						    <th scope="col">1st Nov</th>
-							
-						</tr>
-					</thead>
-					<tbody>
-						<tr>
-							<th scope="row">Lalbagh Botanical Garden</th>
-							<td>5680</td>
-							<td>6880</td>
-							<td>5760</td>
-							<td>5120</td>
-							<td>2640</td>
+{% block head2 %} 
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.js"></script>
+       {{ form.media }}
+{% endblock %}
 
-						</tr>
+{% block tabitems %} 
+	<li class="active"><a href="bins.html">Bins- Fill Level</a></li>
+  	<li><a href="optimal-route.html">Optimal Route</a></li>
+  	<li><a href="analytics.html">Analytics</a></li>
+{% endblock %}
 
-						
-					</tbody>
-				</table>
-			</div>
-		</div>
-		
-		
-		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
-		
-		
-		<script src="chart.js"></script>
-		
-	</body>
-</html>
+{% block content2 %} 
+<div class="row">
+	<div class="col-sm-2 col-md-offset-1">
+		<br>
+		<ul class="nav nav-pills nav-stacked">
+        	<li><a href="details_curr.html">Current Week View</a></li>
+        	<li class="active"><a href="details_custom.html">Custom View</a></li>
+      	</ul>
+	</div><!--end column-->
+	<div class="col-sm-6 col-md-offset-1">
+		<br>
+		<form method="post" role="form">
+        {% for field in form.visible_fields %}
+          <div id="div_{{ field.html_name }}" 
+            class="form-group{% if field.errors %} has-error{% endif %}">
+            {{ field.label_tag }}
+            {{ field }}
+            <div class="text-muted pull-right">
+              <small>{{ field.help_text }}</small>
+            </div>
+            <div class="help-block">
+              {{ field.errors }}
+            </div>
+          </div>
+        {% endfor %}
+        {% for hidden in form.hidden_fields %}
+          {{ hidden }}
+        {% endfor %}
+        {% csrf_token %}
+        <div class="form-group">
+          <input type="submit" value="Submit" class="btn btn-primary"/>
+        </div><!--end form group-->
+      </form>
+	</div><!-- end column-->
+</div><!--end row-->			
+{% endblock %}

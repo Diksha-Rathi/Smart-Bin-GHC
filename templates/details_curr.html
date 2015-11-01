@@ -1,0 +1,52 @@
+{% extends "base2.html" %}
+
+{% block head2 %}
+	<script src="../static/js/chart.js"></script>
+{% endblock %}
+
+{% block tabitems %} 
+	<li class="active"><a href="bins.html">Bins- Fill Level</a></li>
+  	<li><a href="optimal-route.html">Optimal Route</a></li>
+  	<li><a href="analytics.html">Analytics</a></li>
+{% endblock %}
+
+{% block content2 %} 
+<div class="row">
+	<div class="col-sm-2 col-md-offset-1">
+		<br>
+		<ul class="nav nav-pills nav-stacked">
+        	<li class="active"><a href="details_curr.html">Current Week View</a></li>
+        	<li><a href="details_custom.html">Custom View</a></li>
+      	</ul>
+	</div><!--end column-->
+	<div class="col-sm-6">
+		<div id="wrapper">
+			<div class="chart">
+				<table id="data-table" border="1" cellpadding="10" cellspacing="0" summary="Humidity analysis of bins">
+					<caption>Humidity in percentage</caption>
+					<thead>
+						<tr>
+							<td>&nbsp;</td>
+							<th scope="col">28th Oct</th>
+							<th scope="col">29th Oct</th>
+							<th scope="col">30th Oct</th>
+							<th scope="col">31st Oct</th>
+						    <th scope="col">1st Nov</th>	
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<th scope="row">LalBagh Botanical Garden</th>
+							<td>4080</td>
+							<td>6080</td>
+							<td>6240</td>
+							<td>3520</td>
+							<td>2240</td>
+						</tr>						
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div><!-- end column-->
+</div><!--end row-->			
+{% endblock %}

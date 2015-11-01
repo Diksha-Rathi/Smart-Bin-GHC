@@ -1,5 +1,10 @@
 {% extends "base2.html" %}
 
+{% block head2 %} 
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.js"></script>
+       {{ form.media }}
+{% endblock %}
+
 {% block tabitems %} 
   <li><a href="bins.html">Bins- Fill Level</a></li>
   <li><a href="optimal-route.html">Optimal Route</a></li>
@@ -8,41 +13,74 @@
 
 {% block content2 %} 
   <div class="row">
-    <div class="col-md-10 col-md-offset-1">
+    <!--<div class="col-md-2 col-md-offset-1">
+      <br>
+      <ul class="nav nav-pills nav-stacked">
+        <li class="active"><a href="analytics.html">Analyze</a></li>
+        <li><a href="export.html">Export</a></li>
+      </ul>
+    </div><!--end column-->
+    <div class="col-md-8 col-md-offset-2">
       <br>
       <h4>Select bin(s) to view comparison analysis.</h4>
       <hr>
-       <ul class="list-group checked-list-box">
-        <!--Bins with 71- 100% fill level-->
-        {% if result1 %}
-          {% for bin in result1 %}
-            <li style="background-color: #881001; color: #fff" class="list-group-item">
-              <input type="checkbox">
-              {{ bin.location_id }}{% if bin.bin_id %}, Bin {{ bin.bin_id }}{% endif %}
-            </li>
-          {% endfor %}
-        {% endif %}
+      <form method="post" role="form">
+        <ul class="list-group checked-list-box">
+          <!--Bins with 71- 100% fill level-->
+          {% if result1 %}
+            {% for bin in result1 %}
+              <li style="background-color: #881001; color: #fff" class="list-group-item">
+                <input type="checkbox">
+                {{ bin.location_id }}{% if bin.bin_id %}, Bin {{ bin.bin_id }}{% endif %}
+              </li>
+            {% endfor %}
+          {% endif %}
 
-        <!--Bins with 51- 70% fill level-->
-        {% if result2 %}
-          {% for bin in result2 %}
-            <li style="background-color: #D5B220; color: #000" class="list-group-item">
-              <input type="checkbox">
-              {{ bin.location_id }}{% if bin.bin_id %}, Bin {{ bin.bin_id }}{% endif %}
-            </li>
-          {% endfor %}
-        {% endif %}
+          <!--Bins with 51- 70% fill level-->
+          {% if result2 %}
+            {% for bin in result2 %}
+              <li style="background-color: #D5B220; color: #000" class="list-group-item">
+                <input type="checkbox">
+                {{ bin.location_id }}{% if bin.bin_id %}, Bin {{ bin.bin_id }}{% endif %}
+              </li>
+            {% endfor %}
+          {% endif %}
 
-        <!--Bins with 0- 50% fill level-->
-        {% if result3 %}
-          {% for bin in result3 %}
-            <li style="background-color: #0A5E18; color: #fff"class="list-group-item">
-              <input type="checkbox">
-              {{ bin.location_id }}{% if bin.bin_id %}, Bin {{ bin.bin_id }}{% endif %}
-            </li>
-          {% endfor %}
-        {% endif %}
-      </div><!--end list-group-->
+          <!--Bins with 0- 50% fill level-->
+          {% if result3 %}
+            {% for bin in result3 %}
+              <li style="background-color: #0A5E18; color: #fff"class="list-group-item">
+                <input type="checkbox">
+                {{ bin.location_id }}{% if bin.bin_id %}, Bin {{ bin.bin_id }}{% endif %}
+              </li>
+            {% endfor %}
+          {% endif %}
+        </ul><!--end ul of list-group-->
+        <br>
+        {% for field in form.visible_fields %}
+          <div id="div_{{ field.html_name }}" 
+            class="form-group{% if field.errors %} has-error{% endif %}">
+            {{ field.label_tag }}
+            {{ field }}
+            <div class="text-muted pull-right">
+              <small>{{ field.help_text }}</small>
+            </div>
+            <div class="help-block">
+              {{ field.errors }}
+            </div>
+          </div>
+        {% endfor %}
+        {% for hidden in form.hidden_fields %}
+          {{ hidden }}
+        {% endfor %}
+        {% csrf_token %}
+        <input type="radio" name="optradio"> Fill Trend<br>
+        <input type="radio" name="optradio"> Humidity<br>
+        <input type="radio" name="optradio"> Temperature<br><br>
+        <div class="form-group">
+          <input type="submit" value="Submit" class="btn btn-primary"/>
+        </div><!--end form group-->
+      </form>
     </div><!--end column-->
   </div><!--end row-->
 {% endblock %}
