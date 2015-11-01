@@ -9,11 +9,15 @@
 {% block content2 %} 
   <div class="row">
     <div class="col-md-10 col-md-offset-1">
+      <br>
+      <h4>Select bin(s) to view comparison analysis.</h4>
+      <hr>
        <ul class="list-group checked-list-box">
         <!--Bins with 71- 100% fill level-->
         {% if result1 %}
           {% for bin in result1 %}
             <li style="background-color: #881001; color: #fff" class="list-group-item">
+              <input type="checkbox">
               {{ bin.location_id }}{% if bin.bin_id %}, Bin {{ bin.bin_id }}{% endif %}
             </li>
           {% endfor %}
@@ -23,6 +27,7 @@
         {% if result2 %}
           {% for bin in result2 %}
             <li style="background-color: #D5B220; color: #000" class="list-group-item">
+              <input type="checkbox">
               {{ bin.location_id }}{% if bin.bin_id %}, Bin {{ bin.bin_id }}{% endif %}
             </li>
           {% endfor %}
@@ -32,6 +37,7 @@
         {% if result3 %}
           {% for bin in result3 %}
             <li style="background-color: #0A5E18; color: #fff"class="list-group-item">
+              <input type="checkbox">
               {{ bin.location_id }}{% if bin.bin_id %}, Bin {{ bin.bin_id }}{% endif %}
             </li>
           {% endfor %}
