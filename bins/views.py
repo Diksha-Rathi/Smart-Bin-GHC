@@ -7,11 +7,18 @@ from django.contrib.auth.decorators import login_required
 from django.core import serializers
 from django.http import HttpResponse
 from datetime import date
+<<<<<<< HEAD
 from bins.forms import ToDoForm
 from django.template.loader import get_template
 from django.template import RequestContext
 #from weasyprint import HTML, CSS
 from django.http import HttpResponse
+=======
+from django.template.loader import get_template
+from django.template import RequestContext
+#from weasyprint import HTML, CSS
+#from django.http import HttpResponse
+>>>>>>> fcfcb272d77a31ee8ace091a85de1ea360cc651e
 from django.template import loader, Context
 import djqscsv
 
@@ -79,6 +86,7 @@ def my_json_view2(request):
 	bin_update = bin_updates.objects.all()
 	data = serializers.serialize("json",bin_update)
 	return HttpResponse(data, content_type="application/json")
+<<<<<<< HEAD
 
 #def edit(request):
 #    if request.method == 'GET':
@@ -89,6 +97,9 @@ def my_json_view2(request):
 #                  "todo_app/template.html",
 #                  dict(form=form))
 
+=======
+	
+>>>>>>> fcfcb272d77a31ee8ace091a85de1ea360cc651e
 ###----------------------------------pip install django-queryset-csv-------------------###
 @login_required
 def get_csv(request):
@@ -134,4 +145,8 @@ def get_csv(request):
 #         'data': csv_data,
 #     })
 #     response.write(t.render(c))
+<<<<<<< HEAD
 #     return response   
+=======
+#     return response	
+>>>>>>> fcfcb272d77a31ee8ace091a85de1ea360cc651e
