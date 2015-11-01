@@ -7,12 +7,6 @@ from django.contrib.auth.decorators import login_required
 from django.core import serializers
 from django.http import HttpResponse
 from datetime import date
-from django.template.loader import get_template
-from django.template import RequestContext
-#from weasyprint import HTML, CSS
-#from django.http import HttpResponse
-from django.template import loader, Context
-import djqscsv
 
 # Create your views here.
 @login_required
@@ -48,12 +42,3 @@ def my_json_view2(request):
 	bin_update = bin_updates.objects.all()
 	data = serializers.serialize("json",bin_update)
 	return HttpResponse(data, content_type="application/json")
-
-
-###----------------------------------pip install django-queryset-csv-------------------###
-@login_required
-def get_csv(request):
-    qs = bin_updates.objects.all()
-    return djqscsv.render_to_csv_response(qs)
-
-    	
