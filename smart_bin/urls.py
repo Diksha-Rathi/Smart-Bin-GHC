@@ -37,8 +37,4 @@ urlpatterns = [
     url(r'^master_data/','bins.views.my_json_view'),
     url(r'^date_wise_update/','bins.views.my_json_view2'),
     url(r'^generate_csv/','bins.views.get_csv'),
-<<<<<<< HEAD
 ]
-=======
-]
->>>>>>> fcfcb272d77a31ee8ace091a85de1ea360cc651e
