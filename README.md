@@ -4,9 +4,8 @@
 The Smart Bin project of GHC Women Hackathon 2015.
 
 View demo video here:
-https://drive.google.com/file/d/0BzFxkSZ1nyeScXh4czhUdkV6eVk/view?usp=sharing
 
-YouTube Link will be uploaded soon
+https://youtu.be/UP_KwSg6GIk
 
 ## Setup Instructions
 
