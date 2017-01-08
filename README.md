@@ -1,14 +1,11 @@
 #Smart Bin-GHC
 ##Project 3
 
-The Smart Bin project of GHC Women Hackathon 2015.
+The Smart Bin project of GHC Women Hackathon 2015.I
 
-View demo video here:
+View demo video here(https://youtu.be/UP_KwSg6GIk)aa.
 
-https://youtu.be/UP_KwSg6GIk
-
-## Setup Instructions
-
+m
 * Clone the source.
 
 ```sh
@@ -26,6 +23,12 @@ $ git clone git@github.com:diksha-rathi/Smart-Bin-GHC.git
 'PASSWORD': 'your_password',
 ```
 
+* Create migrations for the models.
+
+```sh
+$ python makemigrations
+```
+
 ## Run the project
 
 ```sh
@@ -40,5 +43,4 @@ MIT
 
 #### Thanks for creating the following:
 
-* Django
-* Bootstrap
+* [bootstrap-datepicker](https://github.com/uxsolutions/bootstrap-datepicker)
