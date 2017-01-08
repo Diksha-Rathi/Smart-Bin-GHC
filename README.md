@@ -2,7 +2,7 @@
 
 The Smart Bin project of GHC Women Hackathon 2015.
 
-View demo video here(https://youtu.be/UP_KwSg6GIk).
+View demo video: [Desktop View](https://youtu.be/UP_KwSg6GIk) | [Mobile View](https://youtu.be/PT_DKmhWBwI)
 
 * Clone the source.
 
