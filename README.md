@@ -1,11 +1,9 @@
-#Smart Bin-GHC
-##Project 3
+#Smart Bin GHCI
 
-The Smart Bin project of GHC Women Hackathon 2015.I
+The Smart Bin project of GHC Women Hackathon 2015.
 
-View demo video here(https://youtu.be/UP_KwSg6GIk)aa.
+View demo video here(https://youtu.be/UP_KwSg6GIk).
 
-m
 * Clone the source.
 
 ```sh
@@ -37,9 +35,8 @@ $ python manage.py runserver
 ```
 
 ##License
-----
 
-MIT
+[MIT](https://github.com/Diksha-Rathi/Smart-Bin-GHC/blob/master/LICENSE)
 
 #### Thanks for creating the following:
 
